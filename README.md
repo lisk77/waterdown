@@ -7,7 +7,7 @@ Status: experimental
 
 ![an example](./example.png?raw=true "example")
 
-## syntax
+## syntax ✍️
 
 h1 - # text
 
