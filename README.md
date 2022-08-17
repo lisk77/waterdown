@@ -1,11 +1,9 @@
 # waterdown 💧
 
 A flavor of Markdown interpreted with Python
----
 
 Status: experimental
 
----
 ## syntax
 
 h1 - # text
