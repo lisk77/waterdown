@@ -8,7 +8,7 @@ Status: experimental
 ![an example](./example.png?raw=true "example")
 
 ## syntax ✍️
-
+```
 h1 - # text
 
 h2 - ## text
@@ -24,3 +24,4 @@ strike - ~text~
 link [text, link]
 
 paragraph - text
+```
