@@ -5,7 +5,6 @@ A flavor of Markdown interpreted with Python
 Status: experimental
 (Does only support one ornament [bold, italic, strike, link] per paragraph as of right now)
 
-![an example](./example.png?raw=true "example")
 
 ## syntax ✍️
 ```
