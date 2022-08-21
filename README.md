@@ -23,6 +23,8 @@ strike - ~text~
 
 link [text, link]
 
+image {link, widthxheight}
+
 paragraph - text
 ```
 
