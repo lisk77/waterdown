@@ -40,3 +40,8 @@ To change the file name which the script is looking for and how the result is ca
 * [ ] multiple ornaments per line
 * [ ] friendlier user interaction
 * [ ] more syntax
+  * [ ] pictures
+  * [ ] code blocks
+  * [ ] instant latex
+  * [ ] lists
+  * [ ] quotes
