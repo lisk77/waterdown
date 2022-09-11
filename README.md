@@ -45,5 +45,5 @@ The file name which the script is looking for and how the result is called can b
   * [x] pictures
   * [ ] code blocks
   * [ ] instant latex
-  * [ ] lists
+  * [x] lists
   * [ ] quotes
