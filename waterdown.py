@@ -1,12 +1,15 @@
-fileName = "test"
+fileName = input("Waterdown file name: ")
 template = "index"
 
-with open(f"./test/{fileName}.md", "r") as f:
+with open(f"{fileName}.wd", "r") as f:
     lines = f.readlines()
 
 splitted = "".join(lines).split("\n")
 
 interpreted = []
+
+def generalParse(line):
+    print("cum")
 
 def paragraphParse(line):
     if "{" and "}" in line:
@@ -43,9 +46,14 @@ def paragraphParse(line):
         strike = line.split("~")
         interpreted.append(f"<p>{strike[0]}<s>{strike[1]}</s>{strike[2]}</p>")
     else:
+        if list(line)[0] == "-":
+            return
+        
         interpreted.append(f"<p>{line}</p>")
 
 def main():
+    uListItems = []
+    oListItems = []
     for i in splitted:
         j = i.split(" ")
         if j[0] == "#":
@@ -55,7 +63,27 @@ def main():
         if j[0] == "###":
             interpreted.append(f"<h3>{i[4:]}</h3>")
         if i == "":
-            interpreted.append("<br>")
+            if len(uListItems) == 0 and len(oListItems) == 0:
+                interpreted.append("<br>")
+        if j[0] == "-":
+            if len(uListItems) == 0:
+                interpreted.append(f"<ul>")
+            uListItems.append(f"<li>{i[2:]}</li>")
+        if j[0] == "--":
+            if len(oListItems) == 0:
+                interpreted.append("<ol>")
+            oListItems.append(f"<li>{i[3:]}</li>")
+        if "-" not in i:
+            if len(uListItems) != 0:
+                for item in uListItems:
+                    interpreted.append(item)
+                interpreted.append("</ul>")
+                uListItems = []
+            if len(oListItems) != 0:
+                for item in oListItems:
+                    interpreted.append(item)
+                interpreted.append("</ol>")
+                oListItems = []
         if "#" not in j[0] and i != "":
             paragraphParse(i)
 
@@ -68,7 +96,7 @@ def main():
     for i,j in enumerate(interpreted):
         html.insert(index+i+1, j)
 
-    with open(f"./test/{fileName}.html", "a") as nind:
+    with open(f"{fileName}.html", "a") as nind:
         for i in html:
             nind.writelines(i + "\n")
 
