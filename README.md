@@ -1,6 +1,6 @@
 # waterdown 💧
 
-![waterdown logo](./waterdownlogo.png = 250x250 "logo")
+![waterdown logo](./waterdownlogo.png = 250x250)
 
 A flavor of Markdown interpreted with Python
 
