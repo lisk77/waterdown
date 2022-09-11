@@ -41,6 +41,8 @@ The file name which the script is looking for and how the result is called can b
 * [x] interpreting standard syntax to html
 * [ ] multiple ornaments per line
 * [ ] friendlier user interaction
+  * [x] minimal CLI
+  * [ ] app
 * [ ] more syntax
   * [x] pictures
   * [ ] code blocks
