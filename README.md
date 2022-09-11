@@ -1,5 +1,7 @@
 # waterdown 💧
 
+![waterdown logo](./waterdownlogo.png "logo")
+
 A flavor of Markdown interpreted with Python
 
 Status: experimental
