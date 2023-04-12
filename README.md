@@ -1,6 +1,6 @@
 # waterdown 💧
 
-<img src="./waterdown-logo.png" width="1250" height="250">
+<img src="./waterdown-logo.png" width="1250" height="450">
 
 A flavor of Markdown interpreted with Python
 
